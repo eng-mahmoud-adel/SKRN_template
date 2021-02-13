@@ -1,0 +1,53 @@
+.card {
+    cursor: pointer;
+    position: relative;
+}
+
+.card .card-body ul {
+    list-style: circle;
+}
+
+.card:hover {
+    border-color: green;
+}
+
+.card.active {
+    background-color: green;
+    color: white;
+}
+
+.card.active h4,
+.card.active h2 {
+    color: white !important;
+}
+
+.card .card-body .check-true {
+    position: absolute;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 31px;
+    top: 36px;
+    left: -17px;
+    text-align: center;
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    display: none;
+}
+
+.card .card-body .check-true.active {
+    display: block;
+}
+
+.card .card-body .check-true i {
+    display: none;
+}
+
+.card .card-body .check-true i.active {
+    display: inline;
+}
+
+.card:hover .check-true {
+    display: block;
+}
