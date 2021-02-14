@@ -9,7 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
 </head>
 
 <body>
@@ -21,16 +21,16 @@
         </div>
       </div>
 
-      <div id="user-profile dropdown">
+      <div id="user-profile ">
         <div class="user-container">
           <img src="imgs/user-profile.png" class="img-fluid" id="user-img" />
           <div id="user-name">Jane Doe</div>
           <div class="dropdown">
             <i class="dropdown-toggle" data-toggle="dropdown"></i>
             <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Edit profile</a>
+              <a class="dropdown-item" href="#">Log out</a>
             </div>
           </div>
         </div>
@@ -54,13 +54,7 @@
         </li>
         <li>
           <a href="#">
-            <span class="fas fa-list"></span>
-            Playlists
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="fas fa-newspaper"></span>
+            <span class="fas fa-video"></span>
             New Arrivals
           </a>
         </li>
@@ -68,6 +62,12 @@
           <a href="#">
             <span class="far fa-clock"></span>
             Coming Soon
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fas fa-newspaper"></span>
+            Latest News
           </a>
         </li>
       </ul>
@@ -102,7 +102,23 @@
     <div class="genre-container">
       <div class="genres d-flex justify-content-around">
         <div class="genre-card-active d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
+          <img src="./imgs/all.png" alt="All" />
+          <h6>All</h6>
+        </div>
+        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
+          <img src="./imgs/action.png" alt="action" />
+          <h6>Drama</h6>
+        </div>
+        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
+          <img src="./imgs/adventure.png" alt="adventure" />
+          <h6>Drama</h6>
+        </div>
+        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
+          <img src="./imgs/animation.png" alt="animation" />
+          <h6>Drama</h6>
+        </div>
+        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
+          <img src="./imgs/comedy.png" alt="comedy" />
           <h6>Drama</h6>
         </div>
         <div class="genre-card d-flex justify-content-center align-items-center flex-column">
@@ -110,31 +126,15 @@
           <h6>Drama</h6>
         </div>
         <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
+          <img src="./imgs/horror.png" alt="horror" />
           <h6>Drama</h6>
         </div>
         <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
+          <img src="./imgs/romance.png" alt="romance" />
           <h6>Drama</h6>
         </div>
         <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
-          <h6>Drama</h6>
-        </div>
-        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
-          <h6>Drama</h6>
-        </div>
-        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
-          <h6>Drama</h6>
-        </div>
-        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
-          <h6>Drama</h6>
-        </div>
-        <div class="genre-card d-flex justify-content-center align-items-center flex-column">
-          <img src="./imgs/drama.png" alt="Drama" />
+          <img src="./imgs/sci-fi.png" alt="sci-fi" />
           <h6>Drama</h6>
         </div>
       </div>
