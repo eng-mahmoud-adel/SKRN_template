@@ -1,3 +1,4 @@
+/* pricing plan section */
 .card {
     cursor: pointer;
     position: relative;
@@ -51,3 +52,52 @@
 .card:hover .check-true {
     display: block;
 }
+/* pricing plan section */
+
+/* registeration form */
+.registeration-form {
+    display: none;
+}
+/* registeration form */
+
+/* payment gateway section */
+.payment .paypal button:hover,
+.payment .bank button:hover {
+    background-color: white;
+    color: grey;
+    border: 2px solid green;
+}
+
+.payment .paypal button,
+.payment .bank button {
+    padding-left: 50px;
+    box-shadow: none;
+}
+
+
+.payment .paypal,
+.payment .bank {
+    position: relative;
+}
+
+.payment .paypal .check-true,
+.payment .bank .check-true {
+    position: absolute;
+    left: 12px;
+    border-radius: 50%;
+    width: 25px;
+    border: 2px solid green;
+    height: 25px;
+    text-align: center;
+    line-height: 20px;
+    color: green;
+}
+
+.payment .paypal button .check-true i.active {
+    display: inline;
+}
+
+.payment .bank button .check-true i {
+    display: none;
+}
+/* payment gateway section */
