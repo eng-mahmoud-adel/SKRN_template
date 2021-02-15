@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKRN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/edit_profile.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="topbar d-flex justify-content-between">
+        <div
+          class="topbar-img d-flex justify-content-center align-items-center"
+        >
+          <div>
+            <a> <img src="./imgs/logo.png" /></a>
+          </div>
+        </div>
+
+        <div id="user-profile ">
+          <div class="user-container">
+            <img src="imgs/user-profile.png" class="img-fluid" id="user-img" />
+            <div id="user-name">Jane Doe</div>
+            <div class="dropdown">
+              <i class="dropdown-toggle" data-toggle="dropdown"></i>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Edit profile</a>
+                <a class="dropdown-item" href="#">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav id="sidebar-nav">
+        <ul class="side-list">
+          <li>
+            <a href="#">
+              <span class="fas fa-tv"></span>
+              TV Series
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="fas fa-film"></span>
+              Movies
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fas fa-video"></span>
+              New Arrivals
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="far fa-clock"></span>
+              Coming Soon
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fas fa-newspaper"></span>
+              Latest News
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="header d-flex justify-content-center align-items-center">
+        <div>
+          <h1>Edit Profile</h1>
+        </div>
+      </div>
+
+      <div class="form row">
+        <div class="offset-xl-4 col-xl-5">
+          <form class="mt-5">
+            <div class="mb-3">
+              <label for="username" class="form-label">*Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Example input placeholder">
+            </div>
+            <div class="mb-3">
+              <label for="fname" class="form-label">*First Name</label>
+              <input type="text" class="form-control" id="fname" placeholder="Another input placeholder">
+            </div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">*Last Name</label>
+              <input type="text" class="form-control" id="lname" placeholder="Example input placeholder">
+            </div>
+            <div class="mb-3">
+              <label for="mail" class="form-label">*Email Address</label>
+              <input type="email" class="form-control" id="mail" placeholder="Another input placeholder">
+            </div>
+            <div class="form-group">
+              <label for="avatar">Avatar</label>
+              <input type="file" class="form-control-file" id="avatar">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src=""></script>
+  </body>
+</html>
