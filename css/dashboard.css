@@ -12,6 +12,7 @@ img {
   height: auto;
 }
 
+
 /* ---------------------------side-Nav-------------------*/
 
 .side-list {
@@ -135,8 +136,8 @@ position: fixed;
 
 /* --------------------------- carousel-------------------*/
 
-#carouselExampleIndicators{
-	height:calc(100vh - 90px);
+#carouselExampleIndicators img{
+height: 40vw;
 }
 
 
@@ -155,12 +156,10 @@ position: fixed;
 }
 
 .genre-card{
-  width: 10%;
   height: 100px;
 }
 .genre-card-active{
   border: 2px solid #3db13d;
-  width: 10%;
   height: 100px;
 }
 
@@ -177,12 +176,3 @@ position: fixed;
   padding: 25px 25px 50px 25px;
 }
 
-.cards{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
-}
-.card{
-  margin: 5px;
-  flex-basis: 23%;
-}
