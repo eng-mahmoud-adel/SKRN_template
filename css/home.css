@@ -1,4 +1,4 @@
-body{height: 5000px; font-family: sans-serif;}
+body{font-family: sans-serif;}
 /* Start Loading */
 .loading{
     position: absolute;
@@ -153,14 +153,11 @@ body{height: 5000px; font-family: sans-serif;}
     overflow: hidden;
 }
 .login{
-    border: 2px solid #272727;
-    border-radius: 10%;
+    background-color: #3EB13E;
+    border-radius: 2%;
 }
 /* End Nav Bar */
 /* Star Slider */
-.carousel-caption{
-
-}
 /* End Slider */
 /* Start Lay Out 2 */
 .lay-out2{
@@ -173,6 +170,15 @@ body{height: 5000px; font-family: sans-serif;}
 }
 .lay-out2 h2{
     margin-bottom: 60px;
+}
+hr{
+    width: 10%;
+    border-style: solid none none;
+    border-width: 5px;
+    border-color: #3EB13E;
+    position: absolute;
+    top: 49px;
+    border-radius: 5%;
 }
 .lay-out2 p{margin-bottom: 60px;}
 .lay-out2 button{
@@ -228,3 +234,40 @@ body{height: 5000px; font-family: sans-serif;}
     background-color: #43AF43;
 }
 /* End Lay Out 3 */
+/* Start Footer */
+.footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer img{
+    width: 33.3333px;
+    margin-right: 10px;
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    float: right;
+}
+.footer img:hover{
+    opacity: 1;
+}
+/* End Footer */
+/* Start Botton  */
+.scroll-up{
+
+    position: fixed;
+    right: 20px;
+    bottom: 0;
+    background-color: #999;
+    padding: 20px;
+    color: #fff;
+    z-index: 999999;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+.scroll-up:hover{
+    background-color: #3EB13E;
+}
+/* End Botton  */
