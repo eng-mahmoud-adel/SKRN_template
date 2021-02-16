@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKRN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/display.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="topbar d-flex justify-content-between">
+        <div
+          class="topbar-img d-flex justify-content-center align-items-center"
+        >
+          <div>
+            <a> <img src="./imgs/logo.png" /></a>
+          </div>
+        </div>
+
+        <div id="user-profile ">
+          <div class="user-container">
+            <img src="imgs/user-profile.png" class="img-fluid" id="user-img" />
+            <div id="user-name">Jane Doe</div>
+            <div class="dropdown">
+              <i class="dropdown-toggle" data-toggle="dropdown"></i>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Edit profile</a>
+                <a class="dropdown-item" href="#">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav id="sidebar-nav">
+        <ul class="side-list">
+          <li>
+            <a href="#">
+              <span class="fas fa-tv"></span>
+              TV Series
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="fas fa-film"></span>
+              Movies
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fas fa-video"></span>
+              New Arrivals
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="far fa-clock"></span>
+              Coming Soon
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fas fa-newspaper"></span>
+              Latest News
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <div class="d-flex justify-content-center">
+        <div class="test ">
+          <div class="video embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-desc">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://149353601.v2.pressablecdn.com/wp-content/uploads/2018/07/poster-7-500x705.jpg" alt="poster">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src=""></script>
+  </body>
+</html>
