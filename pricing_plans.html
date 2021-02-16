@@ -39,8 +39,52 @@
             </ul>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                <li class="nav-item pr-2">
+                    <!-- <a class="nav-link" href="login.html">Login</a> -->
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                        Login
+                    </button>
+                    
+                    <!-- login page modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title"><b>Please Login</b></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group mx-sm-3">
+                                        <label class="text-muted"><span><font color="red">*</font></span> Username</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                
+                                    <div class="form-group mx-sm-3">
+                                        <label class="text-muted"><span><font color="red">*</font></span> Password</label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                
+                                    <div class="form-check mx-sm-3 pt-3">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label text-muted">
+                                            Remember me
+                                        </label>
+                                        <div class="d-inline-block offset-md-4 offset-sm-4 offset-4">
+                                            <a href=""><font color="green">Lost your password</font></a>
+                                        </div>
+                                    </div>
+                
+                                    <button type="submit" class="btn btn-success mt-5 col-md-6 col-sm-5 col-5 mx-sm-3">Login</button> 
+                                </form>
+                            </div>
+                            <div class="modal-footer border-top-0 pb-4">
+                                <p class="text-muted mx-auto">Don't have account? <a href=""><font color="green">Sign Up</font></a></p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
