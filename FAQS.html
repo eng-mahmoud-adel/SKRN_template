@@ -16,40 +16,36 @@
 <body>
 
     <!-- Start NavBar -->
-    <nav class="navbar">
-        <div class="container">
-
-            <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="home.html">SKRN.</a>
-            </div>
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="home.html">HOME <span class="sr-only">(current)</span></a></li>
-                <li><a href="dashboard.html">VIDEO LIBRARY</a></li>
+    <nav class="navbar navbar-expand-lg navbar-ligh container">
+        <a class="navbar-brand" href="home.html">SKRN.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">VIDEO LIBRARY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing_plans.html">PRICING PLANS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQS.html">FAQS</a>
+                </li>
+                
             </ul>
 
-            <ul class="nav navbar-nav">
-                <li><a href="pricing_plans.html">PRICING PLANS</a></li>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
             </ul>
-            <ul class="nav navbar-nav">
-                <li><a href="FAQS.html">FAQS</a></li>
-            </ul>
-            <ul class="login nav navbar-nav navbar-right">
-                <li><a href="login.html">Login</a></li>
-                </ul>
-    
-        
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-        </nav>
+        </div>
+    </nav>
     <!-- End NavBar -->
 
     <div class="bg-light text-center py-5 border-bottom">
