@@ -75,3 +75,46 @@ $(function() {
     });
     
 });
+
+
+// registeration form to send to the server
+let end_point = "/register";
+let registered_user = {};
+
+document.getElementById("form").addEventListener("submit", async function(event){
+    event.preventDefault();
+    let username = document.getElementById("username").value;
+    let first_name = document.getElementById("first_name").value;
+    let last_name = document.getElementById("last_name").value;
+    let password = document.getElementById("password").value;
+    let email = document.getElementById("email").value;
+
+    registered_user.username = username;
+    registered_user.first_name = first_name;
+    registered_user.last_name = last_name;
+    registered_user.password = password;
+    registered_user.email = email;
+    
+    // sending username and password from registered_user object
+    let data_sent = await fetch(`http://anyservice.imassoft.com/1907${end_point}`, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers": "Content-Type"
+        },
+        body: JSON.stringify(registered_user)
+    });
+
+    // retrieving data from server to check
+    let data_get = await data_sent.json();
+
+    // checking if there is a token or not
+    if(data_get.token) {
+        alert("login success");
+    } else {
+        alert(data_get.error);
+    }
+
+});

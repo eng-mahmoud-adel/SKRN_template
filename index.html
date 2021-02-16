@@ -69,29 +69,29 @@
                               </button>
                           </div>
                           <div class="modal-body">
-                              <form>
-                                  <div class="form-group mx-sm-3">
-                                      <label class="text-muted"><span><font color="red">*</font></span> Username</label>
-                                      <input type="text" class="form-control">
-                                  </div>
+                            <form id="form">
+                              <div class="form-group mx-sm-3">
+                                  <label class="text-muted"><span><font color="red">*</font></span> Username</label>
+                                  <input type="text" name="username" id="username" class="form-control" required>
+                              </div>
+          
+                              <div class="form-group mx-sm-3">
+                                  <label class="text-muted"><span><font color="red">*</font></span> Password</label>
+                                  <input type="password" name="password" id="password" class="form-control" required>
+                              </div>
               
-                                  <div class="form-group mx-sm-3">
-                                      <label class="text-muted"><span><font color="red">*</font></span> Password</label>
-                                      <input type="password" class="form-control">
+                              <div class="form-check mx-sm-3 pt-3">
+                                  <input class="form-check-input" type="checkbox">
+                                  <label class="form-check-label text-muted">
+                                      Remember me
+                                  </label>
+                                  <div class="d-inline-block offset-md-4 offset-sm-4 offset-4">
+                                      <a href=""><font color="green">Lost your password</font></a>
                                   </div>
-              
-                                  <div class="form-check mx-sm-3 pt-3">
-                                      <input class="form-check-input" type="checkbox">
-                                      <label class="form-check-label text-muted">
-                                          Remember me
-                                      </label>
-                                      <div class="d-inline-block offset-md-4 offset-sm-4 offset-4">
-                                          <a href=""><font color="green">Lost your password</font></a>
-                                      </div>
-                                  </div>
+                              </div>
               
                                   <button type="submit" class="btn btn-success mt-5 col-md-6 col-sm-5 col-5 mx-sm-3">Login</button> 
-                              </form>
+                            </form>
                           </div>
                           <div class="modal-footer border-top-0 pb-4">
                               <p class="text-muted mx-auto">Don't have account? <a href="pricing_plans.html"><font color="green">Sign Up</font></a></p>
