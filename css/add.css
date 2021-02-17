@@ -130,9 +130,49 @@ body {
     position: relative;
     left: 160px;
     top:90px;
-      width: calc(100vw - 175px);
-      background-color: red;
+    width: calc(100vw - 175px);
+    background-color: #3db13d;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: aliceblue;
+    text-align: center;
   }
-  
-  
- 
+  .add-form{
+    position: relative;
+    left: 160px;
+    top: 150px;
+  }
+  /* .add-form input{
+    display: block;
+    width: 400px;
+    height: 70px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: auto;
+  } */
+  #genre, #url, #title, #url-vid{
+    display: block;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    /* padding: 10px; */
+    position: relative;
+    left: -60px;
+    text-align: center;
+    border: 1px solid #3db13d;
+  }
+  .add-form input:hover{background-color: #3db13d; color: aliceblue;} 
+  #btn{
+    display: block;
+    width: 400px;
+    height: 70px;
+    margin: auto;
+    /* padding: 10px; */
+    position: relative;
+    left: -60px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #3db13d;
+    color: aliceblue;
+    
+  }
