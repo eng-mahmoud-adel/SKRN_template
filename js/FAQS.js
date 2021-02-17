@@ -1,6 +1,7 @@
 let end_point = "/login";
 let loggedIn_user = {};
 
+// login form to send to the server
 document.getElementById("form").addEventListener("submit", async function(event){
     event.preventDefault();
     let username = document.getElementById("username").value;
@@ -26,9 +27,11 @@ document.getElementById("form").addEventListener("submit", async function(event)
 
     // checking if there is a token or not
     if(data_get.token) {
-        alert("login success");
+        // alert("login success");
+        window.location.href = './dashboard.html';
+        localStorage.setItem('token', data_get.token);
     } else {
-        alert(data_get.error);
+        alert("invalid username or password");
     }
 
 });

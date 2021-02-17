@@ -77,17 +77,56 @@ $(function() {
 });
 
 
-// registeration form to send to the server
-let end_point = "/register";
-let registered_user = {};
-
+// login form to send to the server
 document.getElementById("form").addEventListener("submit", async function(event){
+    let end_point = "/login";
+    let loggedIn_user = {};
+
     event.preventDefault();
     let username = document.getElementById("username").value;
-    let first_name = document.getElementById("first_name").value;
-    let last_name = document.getElementById("last_name").value;
     let password = document.getElementById("password").value;
-    let email = document.getElementById("email").value;
+
+    loggedIn_user.username = username;
+    loggedIn_user.password = password;
+    
+    // sending username and password from loggedIn_user object
+    let data_sent = await fetch(`http://anyservice.imassoft.com/1907${end_point}`, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers": "Content-Type"
+        },
+        body: JSON.stringify(loggedIn_user)
+    });
+
+    // retrieving data from server to check
+    let data_get = await data_sent.json();
+
+    // checking if there is a token or not
+    if(data_get.token) {
+        // alert("login success");
+        window.location.href = './dashboard.html';
+        localStorage.setItem('token', data_get.token);
+    } else {
+        alert("invalid username or password");
+    }
+
+});
+
+
+// registeration form to send to the server
+document.getElementById("register_form").addEventListener("submit", async function(event){
+    let end_point = "/register";
+    let registered_user = {};
+    
+    event.preventDefault();
+    let username = document.getElementById("register_username").value;
+    let first_name = document.getElementById("register_first_name").value;
+    let last_name = document.getElementById("register_last_name").value;
+    let password = document.getElementById("register_password").value;
+    let email = document.getElementById("register_email").value;
 
     registered_user.username = username;
     registered_user.first_name = first_name;
@@ -109,12 +148,11 @@ document.getElementById("form").addEventListener("submit", async function(event)
 
     // retrieving data from server to check
     let data_get = await data_sent.json();
+    console.log(data_get)
 
-    // checking if there is a token or not
-    if(data_get.token) {
-        alert("login success");
-    } else {
-        alert(data_get.error);
+    if(data_get) {
+        console.log(data_get)
+        alert("created account successfully");
+        window.location.href = './index.html';
     }
-
 });
