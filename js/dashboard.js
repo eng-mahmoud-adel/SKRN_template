@@ -2,9 +2,10 @@ let movies;
 const req = async () => {
   const response = await fetch("http://anyservice.imassoft.com/501/videos", {
     method: "GET",
-    headers: { token: "f72c4067-e750-4da1-91af-fc2d95441479" },
+    headers: { token:localStorage.getItem('token') },
   });
-  const json = await response.json();
+  const json = await response.  json();
+  console.log(json)
   for (let i = 0; i < json.length; i++) {
     $(".movies .row")
       .append(`<div class="card col-xl-3 col-lg-4 col-md-6 col-sm-12" id="${json[i].id}"

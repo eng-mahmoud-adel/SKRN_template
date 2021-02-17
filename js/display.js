@@ -7,7 +7,7 @@ const req = async () => {
       `http://anyservice.imassoft.com/501/videos/${id}`,
       {
         method: "GET",
-        headers: { token: "f72c4067-e750-4da1-91af-fc2d95441479" },
+        headers: { token: window.localStorage.getItem('token') },
       }
     );
     const json = await response.json();
