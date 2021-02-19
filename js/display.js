@@ -37,10 +37,7 @@ const req = async () => {
     $('.card-text').text('movie description')
 
     $('.movie_title').text(json.data.title);
-<<<<<<< HEAD
-  };
 
-=======
     for(let i in json.data.reviews){
       let stars=json.data.reviews[i].stars
       $('#reviews').append(`<div class="review-card"><h5 class="review-name" data-stars=${stars}>${json.data.reviews[i].username} 
@@ -57,9 +54,8 @@ const req = async () => {
         stars=$(this).attr('data-stars')
         $(this).children(`i:lt(${stars})`).addClass('highlighted ')
       })
-      }
-  
->>>>>>> c2bb4b94ac8abcffd849b9512b6e776593438d07
+}
+
   req();
 
 $(function(){
@@ -85,10 +81,6 @@ $(function(){
   })
 
 })
-<<<<<<< HEAD
-=======
-
-
 
 async function addRate(e){
   e.preventDefault();
@@ -112,7 +104,7 @@ async function addRate(e){
         date:new Date()
       })
   }
-  let httpResponse = await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,{
+  let httpResponse = await fetch(`https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,{
   method : "POST",
   headers : {
     'Content-type':'application/json',
@@ -129,4 +121,3 @@ async function addRate(e){
     }
 
 document.getElementById('rate_btn').addEventListener('click',addRate)
->>>>>>> c2bb4b94ac8abcffd849b9512b6e776593438d07
