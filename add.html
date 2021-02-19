@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Add Video</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -33,13 +33,14 @@
               class="img-fluid"
               id="user-img"
             />
-            <div id="user-name">Jane Doe</div>
+            <div id="user-name">Admin</div>
             <div class="dropdown">
               <i class="dropdown-toggle" data-toggle="dropdown"></i>
               <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="#">Edit profile</a>
+                <a class="dropdown-item" href="edit_profile.html">Edit profile</a>
                 <a id="logout" class="dropdown-item" href="#">Log out</a>
+                <a id="add" class="dropdown-item" href="#">Add Video</a>
               </div>
             </div>
           </div>
@@ -90,9 +91,9 @@
     <div class="add-form">
       <form id="form-add" onsubmit="return false">
         <input type="text" id="genre" placeholder="Enter Your Genre">
-        <input type="text" id="url" placeholder="Enter Your URL For Image">
+        <input type="text" id="video_image" placeholder="Enter Your URL For Image">
         <input type="text" id="title" placeholder="Enter Movies Title">
-        <input type="text" id="url-vid" placeholder="Enter URL For Video">
+        <input type="text" id="video_link" placeholder="Enter URL For Video">
         <button onclick="addvideo()" id="btn">Add Video</button>
       </form>
 

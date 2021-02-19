@@ -4,7 +4,7 @@ let id=urlParams.get('id');
 
 const req = async () => {
     const response = await fetch(
-      `http://anyservice.imassoft.com/501/videos/${id}`,
+      `http://anyservice.imassoft.com/1907/videos/${id}`,
       {
         method: "GET",
         headers: { token: window.localStorage.getItem('token') },

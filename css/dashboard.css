@@ -76,7 +76,7 @@ img {
 
 .user-container{
 	height: 45px;
-	padding: 25px 40px 25px 20px;
+	padding: 0 40px 0 20px;
   cursor: pointer;
 }
 #user-img {

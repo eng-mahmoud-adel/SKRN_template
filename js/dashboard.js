@@ -1,11 +1,23 @@
+// assigning name for the logged in user
+let urlParams = new URLSearchParams(window.location.search);
+let username = urlParams.get('username');
+document.getElementById('user-name').textContent = username;
+
+if(username != 'admin') {
+  document.getElementById('add').style.display = 'none';
+} else {
+  document.getElementById('add').onclick = () => window.location.href = 'add.html';
+}
+
 let movies;
 const req = async () => {
-  const response = await fetch("http://anyservice.imassoft.com/501/videos", {
+  const response = await fetch("http://anyservice.imassoft.com/1907/videos", {
     method: "GET",
     headers: { token:localStorage.getItem('token') },
   });
-  const json = await response.  json();
+  const json = await response.json();
   console.log(json)
+
   for (let i = 0; i < json.length; i++) {
     $(".movies .row")
       .append(`<div class="card col-xl-3 col-lg-4 col-md-6 col-sm-12" id="${json[i].id}"
@@ -23,7 +35,7 @@ const req = async () => {
   $(".card").click(function () {
     var elmId = $(this).attr("id");
     console.log(elmId);
-    window.location.href = `./display.html?id=${elmId}`;
+    window.location.href = `./display.html?id=${elmId}&username=${username}`;
   });
 };
 req();

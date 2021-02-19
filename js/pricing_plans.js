@@ -106,8 +106,8 @@ document.getElementById("form").addEventListener("submit", async function(event)
 
     // checking if there is a token or not
     if(data_get.token) {
-        // alert("login success");
-        window.location.href = './dashboard.html';
+        alert("login success");
+        window.location.href = `./dashboard.html?username=${data_get.data.username}`;
         localStorage.setItem('token', data_get.token);
     } else {
         alert("invalid username or password");
