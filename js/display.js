@@ -15,6 +15,8 @@ document.getElementById('edit_btn').onclick = () => window.location.href = `./ed
 if(username != 'admin') {
   document.getElementById('add').style.display = 'none';
   document.getElementById('edit_btn').style.display = 'none';
+  document.getElementById('delete_btn').style.display = 'none';
+
 } else {
   document.getElementById('add').onclick = () => window.location.href = 'add.html';
 }
@@ -122,3 +124,19 @@ async function addRate(e){
     }
 
 document.getElementById('rate_btn').addEventListener('click',addRate)
+
+
+//delete event
+
+$('#delete_btn').click(async function(){
+
+  const response =await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,
+    {
+      method: "DELETE",
+      headers: { token: window.localStorage.getItem('token') },
+    }
+  );
+
+    const json = await response.json();
+    window.location.href = `./dashboard.html?username=${username}`
+})
