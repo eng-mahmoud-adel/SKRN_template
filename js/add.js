@@ -15,7 +15,8 @@ async function addvideo(){
         video_link : document.getElementById("video_link").value,
         title: document.getElementById("title").value,
         video_image :document.getElementById("video_image").value,
-        genre : document.getElementById("genre").value
+        genre : document.getElementById("genre").value,
+        reviews:[]
     }
     console.log(addObj)
     let httpResponse = await fetch("https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/",{

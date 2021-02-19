@@ -10,7 +10,7 @@ document.getElementById('new').onclick = () => window.location.href = `./dashboa
 document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 
-
+let reviews;
 const req = async () => {
     const response = await fetch(
       `https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,
@@ -24,6 +24,7 @@ const req = async () => {
     document.getElementById("title").value=json.data.title,
     document.getElementById("video_image").value=json.data.video_image,
     document.getElementById("genre").value=json.data.genre
+    reviews=[...json.data.reviews]
   };
   req();
 
@@ -33,7 +34,8 @@ const req = async () => {
         video_link : document.getElementById("video_link").value,
         title: document.getElementById("title").value,
         video_image :document.getElementById("video_image").value,
-        genre : document.getElementById("genre").value
+        genre : document.getElementById("genre").value,
+        reviews:reviews
     }
     console.log(addObj)
     let httpResponse = await fetch(`https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,{

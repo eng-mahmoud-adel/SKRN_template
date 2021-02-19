@@ -19,7 +19,7 @@ if(username != 'admin') {
   document.getElementById('add').onclick = () => window.location.href = 'add.html';
 }
 
-
+let movie_data;
 const req = async () => {
     const response = await fetch(
       `https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,
@@ -29,6 +29,7 @@ const req = async () => {
       }
     );
     const json = await response.json();
+    movie_data=json
     console.log(json)
     $('iframe').attr('src',json.data.video_link)
     $('.card-title').text(json.data.title)
@@ -36,8 +37,29 @@ const req = async () => {
     $('.card-text').text('movie description')
 
     $('.movie_title').text(json.data.title);
+<<<<<<< HEAD
   };
 
+=======
+    for(let i in json.data.reviews){
+      let stars=json.data.reviews[i].stars
+      $('#reviews').append(`<div class="review-card"><h5 class="review-name" data-stars=${stars}>${json.data.reviews[i].username} 
+      <small>${json.data.reviews[i].date}</small>
+      <i class="fas fa-star" aria-hidden="true" id="s1"></i>
+                        <i class="fas fa-star" aria-hidden="true" id="s2"></i>
+                        <i class="fas fa-star" aria-hidden="true" id="s3"></i>
+                        <i class="fas fa-star" aria-hidden="true" id="s4"></i>
+                        <i class="fas fa-star" aria-hidden="true" id="s5"></i>
+      </h5>             
+      <p class="review-text" </div>${json.data.reviews[i].review}</p>`)
+        }
+      $('.review-name').each(function(){
+        stars=$(this).attr('data-stars')
+        $(this).children(`i:lt(${stars})`).addClass('highlighted ')
+      })
+      }
+  
+>>>>>>> c2bb4b94ac8abcffd849b9512b6e776593438d07
   req();
 
 $(function(){
@@ -63,3 +85,48 @@ $(function(){
   })
 
 })
+<<<<<<< HEAD
+=======
+
+
+
+async function addRate(e){
+  e.preventDefault();
+  let stars=0;
+  $( ".stars" ).children('i').each(function(){
+    if($(this).css('color') == 'rgb(255, 255, 0)'){
+      stars++;
+    }
+    console.log(stars)
+  })
+
+  let addObj = {
+      video_link : movie_data.data.video_link,
+      title: movie_data.data.title,
+      video_image :movie_data.data.video_image,
+      genre : movie_data.data.genre,
+      reviews : (movie_data.data.reviews).concat({
+        username:username,
+        review:document.getElementById('review').value,
+        stars:stars,
+        date:new Date()
+      })
+  }
+  let httpResponse = await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,{
+  method : "POST",
+  headers : {
+    'Content-type':'application/json',
+    'token' : localStorage.getItem('token'),
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "*",
+    "Access-Control-Allow-Headers": "Content-Type"
+  },
+  body:JSON.stringify(addObj)
+});
+      let jsonObj = await httpResponse.json();
+      console.log(jsonObj)
+      window.location.href = `./display.html?id=${id}&username=${username}`;
+    }
+
+document.getElementById('rate_btn').addEventListener('click',addRate)
+>>>>>>> c2bb4b94ac8abcffd849b9512b6e776593438d07
