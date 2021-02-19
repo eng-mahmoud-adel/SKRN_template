@@ -33,7 +33,8 @@ const req = async () => {
         video_link : document.getElementById("video_link").value,
         title: document.getElementById("title").value,
         video_image :document.getElementById("video_image").value,
-        genre : document.getElementById("genre").value
+        genre : document.getElementById("genre").value,
+        // reviews : { {user:user1 , review : "xxxxxxxxx" ,rate: 3} ,{} ,{} }
     }
     console.log(addObj)
     let httpResponse = await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,{

@@ -146,11 +146,11 @@ body {
 }
 
 /* rate */
-#rate .stars {
-  cursor: pointer;
+.stars{
+  height: 40px;
 }
-
-#rate .stars .checked {
-  color: orange;
+.fa-star{
+  font-size: 29px;
+  margin-top: 12px;
 }
 /* rate */
