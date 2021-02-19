@@ -10,12 +10,15 @@ document.getElementById('movies').onclick = () => window.location.href = `./dash
 document.getElementById('new').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
 document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
 document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('edit_btn').onclick = () => window.location.href = `./edit.html?id=${id}`;
 
 if(username != 'admin') {
   document.getElementById('add').style.display = 'none';
+  document.getElementById('edit_btn').style.display = 'none';
 } else {
   document.getElementById('add').onclick = () => window.location.href = 'add.html';
 }
+
 
 const req = async () => {
     const response = await fetch(
@@ -34,4 +37,6 @@ const req = async () => {
 
     $('.movie_title').text(json.data.title);
   };
+
+  
   req();

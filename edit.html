@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
-    <title>SKRN</title>
-
+    <title>Edit Video</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -15,7 +12,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/edit_profile.css" />
+    <link rel="stylesheet" href="./css/edit.css" />
   </head>
 
   <body>
@@ -31,13 +28,17 @@
 
         <div id="user-profile ">
           <div class="user-container">
-            <img src="images/user-profile.png" class="img-fluid" id="user-img" />
+            <img
+              src="images/user-profile.png"
+              class="img-fluid"
+              id="user-img"
+            />
             <div id="user-name"></div>
             <div class="dropdown">
               <i class="dropdown-toggle" data-toggle="dropdown"></i>
               <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#">Profile</a>
-                <a id="edit" class="dropdown-item" href="#">Edit profile</a>
+                <a class="dropdown-item" href="#">Edit profile</a>
                 <a id="logout" class="dropdown-item" href="#">Log out</a>
                 <a id="add" class="dropdown-item" href="#">Add Video</a>
               </div>
@@ -85,40 +86,19 @@
     </header>
 
     <div class="content">
-      <div class="header d-flex justify-content-center align-items-center">
-        <div>
-          <h1>Edit Profile</h1>
-        </div>
-      </div>
-
-      <div class="form row">
-        <div class="offset-xl-4 col-xl-5">
-          <form class="mt-5">
-            <div class="mb-3">
-              <label for="username" class="form-label"><font color="red">*</font> Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Example input placeholder">
-            </div>
-            <div class="mb-3">
-              <label for="fname" class="form-label"><font color="red">*</font> First Name</label>
-              <input type="text" class="form-control" id="fname" placeholder="Another input placeholder">
-            </div>
-            <div class="mb-3">
-              <label for="lname" class="form-label"><font color="red">*</font> Last Name</label>
-              <input type="text" class="form-control" id="lname" placeholder="Example input placeholder">
-            </div>
-            <div class="mb-3">
-              <label for="mail" class="form-label"><font color="red">*</font> Email Address</label>
-              <input type="email" class="form-control" id="mail" placeholder="Another input placeholder">
-            </div>
-            <div class="form-group">
-              <label for="avatar">Avatar</label>
-              <input type="file" class="form-control-file" id="avatar">
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
-        </div>
-      </div>
+        <h1>Add Video</h1>
     </div>
+    <div class="add-form">
+      <form id="form-add" onsubmit="return false">
+        <input type="text" id="genre" placeholder="Enter Your Genre">
+        <input type="text" id="video_image" placeholder="Enter Your URL For Image">
+        <input type="text" id="title" placeholder="Enter Movies Title">
+        <input type="text" id="video_link" placeholder="Enter URL For Video">
+        <button onclick="editVideo()" id="btn">Edit Video</button>
+      </form>
+
+    </div>
+
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -135,7 +115,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="js/edit_profile.js"></script>
-    <script src="./js/logout.js"></script>
+    <script src="./js/edit.js">
+    </script>
+        <script src="js/logout.js"></script>
+
   </body>
 </html>
