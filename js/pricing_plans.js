@@ -90,7 +90,7 @@ document.getElementById("form").addEventListener("submit", async function(event)
     loggedIn_user.password = password;
     
     // sending username and password from loggedIn_user object
-    let data_sent = await fetch(`http://anyservice.imassoft.com/1907${end_point}`, {
+    let data_sent = await fetch(`https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907${end_point}`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
@@ -144,7 +144,7 @@ document.getElementById("register_form").addEventListener("submit", async functi
     registered_user.email = email;
     
     // sending username and password from registered_user object
-    let data_sent = await fetch(`http://anyservice.imassoft.com/1907${end_point}`, {
+    let data_sent = await fetch(`https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907${end_point}`, {
         method: "POST",
         headers: {
         "Content-Type": "application/json",

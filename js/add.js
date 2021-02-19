@@ -18,7 +18,7 @@ async function addvideo(){
         genre : document.getElementById("genre").value
     }
     console.log(addObj)
-    let httpResponse = await fetch("http://anyservice.imassoft.com/1907/videos/",{
+    let httpResponse = await fetch("https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/",{
     method : "POST",
     headers : {
       'Content-type':'application/json',

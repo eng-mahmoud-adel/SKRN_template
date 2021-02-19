@@ -22,7 +22,7 @@ if(username != 'admin') {
 
 const req = async () => {
     const response = await fetch(
-      `http://anyservice.imassoft.com/1907/videos/${id}`,
+      `https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,
       {
         method: "GET",
         headers: { token: window.localStorage.getItem('token') },

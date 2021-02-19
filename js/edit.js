@@ -13,7 +13,7 @@ document.getElementById('news').onclick = () => window.location.href = `./dashbo
 
 const req = async () => {
     const response = await fetch(
-      `http://anyservice.imassoft.com/1907/videos/${id}`,
+      `https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,
       {
         method: "GET",
         headers: { token: window.localStorage.getItem('token') },
@@ -36,7 +36,7 @@ const req = async () => {
         genre : document.getElementById("genre").value
     }
     console.log(addObj)
-    let httpResponse = await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,{
+    let httpResponse = await fetch(`https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/${id}`,{
     method : "POST",
     headers : {
       'Content-type':'application/json',

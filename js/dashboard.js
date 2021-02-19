@@ -18,7 +18,7 @@ if(username != 'admin') {
 
 let movies;
 const req = async () => {
-  const response = await fetch("http://anyservice.imassoft.com/1907/videos", {
+  const response = await fetch("https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos", {
     method: "GET",
     headers: { token:localStorage.getItem('token') },
   });
