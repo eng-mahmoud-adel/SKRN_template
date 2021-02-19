@@ -108,6 +108,65 @@
             </div>
           </div>
         </div>
+
+        <div id="rate">
+          <button type="button" class="btn btn-success col-md-2" data-toggle="modal" data-target="#rateModal">
+            Rate
+          </button>
+
+          <!-- rate modal -->
+          <div class="modal" id="rateModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title"><b>Please Rate</b></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                <div class="modal-body">
+                  <small>Write a review for</small>
+                  <h5 class="movie_title"></h5>
+
+                  <div class="pt-4">
+                    <hr>
+                  </div>
+                  <form id="form">
+                    <div class="form-group mx-sm-3">
+                      <small>Rate this movie</small>
+                      <div class="stars">
+                        <i class="fas fa-star checked" aria-hidden="true"></i>
+                        <i class="fas fa-star checked" aria-hidden="true"></i>
+                        <i class="fas fa-star checked" aria-hidden="true"></i>
+                        <i class="fas fa-star checked" aria-hidden="true"></i>
+                        <i class="fas fa-star checked" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </div>
+                    </div>
+
+                    <div class="form-group mx-sm-3">
+                        <label class="text-muted">Summary</label>
+                        <input type="text" name="summary" class="form-control col-md-8" required>
+                    </div>
+
+                    <div class="form-group mx-sm-3">
+                      <label class="text-muted pl-0">Review</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="row mt-5 mx-sm-3">
+                      <button type="submit" class="btn btn-secondary">Cancel</button> 
+                      <button type="submit" class="btn btn-success ml-3">Submit</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          
+        </div>
+
       </div>
     </div>
 

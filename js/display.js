@@ -32,5 +32,6 @@ const req = async () => {
     $('.card-img').attr('src',json.data.video_image)
     $('.card-text').text('movie description')
 
+    $('.movie_title').text(json.data.title);
   };
   req();

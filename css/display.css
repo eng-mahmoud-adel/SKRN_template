@@ -144,3 +144,13 @@ body {
     margin: 50px;
     padding: 20px;
 }
+
+/* rate */
+#rate .stars {
+  cursor: pointer;
+}
+
+#rate .stars .checked {
+  color: orange;
+}
+/* rate */
