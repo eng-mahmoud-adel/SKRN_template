@@ -10,7 +10,7 @@ document.getElementById('new').onclick = () => window.location.href = `./dashboa
 document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 
-
+let reviews;
 const req = async () => {
     const response = await fetch(
       `http://anyservice.imassoft.com/1907/videos/${id}`,
@@ -24,6 +24,7 @@ const req = async () => {
     document.getElementById("title").value=json.data.title,
     document.getElementById("video_image").value=json.data.video_image,
     document.getElementById("genre").value=json.data.genre
+    reviews=[...json.data.reviews]
   };
   req();
 
@@ -34,7 +35,7 @@ const req = async () => {
         title: document.getElementById("title").value,
         video_image :document.getElementById("video_image").value,
         genre : document.getElementById("genre").value,
-        // reviews : { {user:user1 , review : "xxxxxxxxx" ,rate: 3} ,{} ,{} }
+        reviews:reviews
     }
     console.log(addObj)
     let httpResponse = await fetch(`http://anyservice.imassoft.com/1907/videos/${id}`,{
