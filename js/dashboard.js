@@ -2,6 +2,13 @@
 let urlParams = new URLSearchParams(window.location.search);
 let username = urlParams.get('username');
 document.getElementById('user-name').textContent = username;
+document.getElementById('logo').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('edit').onclick = () => window.location.href = `./edit_profile.html?username=${username}`;
+document.getElementById('tv').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('movies').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('new').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
+document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=${username}`;
 
 if(username != 'admin') {
   document.getElementById('add').style.display = 'none';
@@ -25,7 +32,7 @@ const req = async () => {
                   data-genre='${json[i].genre}' >
                 <img
                   class="card-img-top"
-                  src="${json[i].img}"
+                  src="${json[i].video_image}"
                 />
               <div class="card-body">
                 <h5 class="card-title">${json[i].title}</h5>

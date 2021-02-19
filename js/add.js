@@ -1,3 +1,15 @@
+// assigning name for the logged in user
+var urlParams = new URLSearchParams(window.location.search);
+let id=urlParams.get('id'); 
+let username = document.getElementById('user-name');
+username.textContent = 'admin';
+document.getElementById('logo').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+document.getElementById('tv').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+document.getElementById('movies').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+document.getElementById('new').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=admin`;
+
 async function addvideo(){
     let addObj = {
         video_link : document.getElementById("video_link").value,
@@ -20,5 +32,7 @@ async function addvideo(){
         let jsonObj = await httpResponse.json();
         console.log(jsonObj)
         console.log(addObj)
+  
+  window.location.href = `./dashboard.html?username=${username}`;
 }
  

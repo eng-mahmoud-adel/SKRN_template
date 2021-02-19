@@ -106,7 +106,7 @@ document.getElementById("form").addEventListener("submit", async function(event)
 
     // checking if there is a token or not
     if(data_get.token) {
-        alert("login success");
+        // alert("login success");
         window.location.href = `./dashboard.html?username=${data_get.data.username}`;
         localStorage.setItem('token', data_get.token);
     } else {
@@ -148,11 +148,10 @@ document.getElementById("register_form").addEventListener("submit", async functi
 
     // retrieving data from server to check
     let data_get = await data_sent.json();
-    console.log(data_get)
-
-    if(data_get) {
-        console.log(data_get)
+    if(!data_get.error) {
         alert("created account successfully");
         window.location.href = './index.html';
+    } else {
+        alert('username already exists please use another one');
     }
 });
