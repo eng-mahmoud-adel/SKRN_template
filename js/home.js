@@ -52,8 +52,18 @@ document.getElementById("form").addEventListener("submit", async function(event)
         // alert("login success");
         window.location.href = `./dashboard.html?username=${data_get.data.username}`;
         localStorage.setItem('token', data_get.token);
+        loggedIn_user.token = localStorage.getItem('token');
     } else {
         alert("invalid username or password");
     }
 
 });
+
+// check if there is an authenticated user or not
+document.getElementById('video_library').onclick = () => {
+    if(!localStorage.getItem('token')) {
+        alert('please login first');
+    } else {
+        window.location.href = `./dashboard.html?username=${loggedIn_user.username}`;
+    }
+}

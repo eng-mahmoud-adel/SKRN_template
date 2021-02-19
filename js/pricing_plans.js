@@ -115,6 +115,15 @@ document.getElementById("form").addEventListener("submit", async function(event)
 
 });
 
+// check if there is an authenticated user or not
+document.getElementById('video_library').onclick = () => {
+    if(!localStorage.getItem('token')) {
+        alert('please login first');
+    } else {
+        window.location.href = `./dashboard.html?username=${loggedIn_user.username}`;
+    }
+}
+
 
 // registeration form to send to the server
 document.getElementById("register_form").addEventListener("submit", async function(event){
