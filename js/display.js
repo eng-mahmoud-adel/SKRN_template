@@ -37,11 +37,7 @@ const req = async () => {
 
     $('.movie_title').text(json.data.title);
   };
-<<<<<<< HEAD
 
-  
-  req();
-=======
   req();
 
 $(function(){
@@ -67,4 +63,3 @@ $(function(){
   })
 
 })
->>>>>>> d75708230c0d409be239c476a00aa6694644baea
