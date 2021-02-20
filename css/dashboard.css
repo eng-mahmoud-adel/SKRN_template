@@ -157,10 +157,20 @@ height: 40vw;
 
 .genre-card{
   height: 100px;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
 }
+.genre-card:hover{opacity: 1;}
 .genre-card-active{
-  border: 2px solid #3db13d;
   height: 100px;
+  width: 100px;
+  background-color: #80a580;
+  opacity: 1;
 }
 
 .genres img {
@@ -178,4 +188,8 @@ height: 40vw;
 
 .card{
   cursor: pointer;
+}
+.card:hover{
+  background-color: #d6e2d6;
+
 }

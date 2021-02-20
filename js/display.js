@@ -15,7 +15,7 @@ document.getElementById('edit_btn').onclick = () => window.location.href = `./ed
 if(username != 'admin') {
   document.getElementById('add').style.display = 'none';
   document.getElementById('edit_btn').style.display = 'none';
-} else {
+}else {
   document.getElementById('add').onclick = () => window.location.href = 'add.html';
 }
 
