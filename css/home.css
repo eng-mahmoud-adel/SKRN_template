@@ -271,4 +271,9 @@ hr{
 .scroll-up:hover{
     background-color: #3EB13E;
 }
+.btn-success{
+    background-color: #F9F9F9;
+    color: #000;
+    border: 1px solid #F9F9F9;
+}
 /* End Botton  */

@@ -157,12 +157,19 @@ body {
 
 
 .review-card{
-  padding: 4px;
-  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 700px;
 }
 .review-text{
   font-size: 20px;
 }
 .highlighted {
-  color:yellow
+  color:yellow;
+}
+small{
+  display: block;
+  margin-top: 10px;
+}
+.fa-star{
 }

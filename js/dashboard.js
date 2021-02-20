@@ -27,7 +27,7 @@ const req = async () => {
 
   for (let i = 0; i < json.length; i++) {
     $(".movies .row")
-      .append(`<div class="card col-xl-3 col-lg-4 col-md-6 col-sm-12" id="${json[i].id}"
+      .append(`<div class="card col-xl-3 col-lg-3 col-md-4 col-sm-6" id="${json[i].id}"
                   alt="Card image cap"
                   data-genre='${json[i].genre}' >
                 <img
