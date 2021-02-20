@@ -46,5 +46,5 @@ async function addvideo(){
         console.log(jsonObj)
         console.log(addObj)
   
-  window.location.href = `./dashboard.html?username=${username}`;
+  window.location.href = `./dashboard.html?username=admin`;
 }
