@@ -10,15 +10,27 @@ document.getElementById('new').onclick = () => window.location.href = `./dashboa
 document.getElementById('soon').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 document.getElementById('news').onclick = () => window.location.href = `./dashboard.html?username=admin`;
 
-async function addvideo(){
-    let addObj = {
-        video_link : document.getElementById("video_link").value,
-        title: document.getElementById("title").value,
-        video_image :document.getElementById("video_image").value,
-        genre : document.getElementById("genre").value,
-        reviews:[]
+// for disabling the add video button if there are no values in the inputs
+$(function () {
+  $('#btn').attr('disabled', '');
+  $('#video_link, #title, #video_image, #genre').on('input', function () {
+    if($('#video_link').val() != "" && $('#title').val() != "" && $('#video_image').val() != "" && $('#genre').val() != ""){
+      $('#btn').removeAttr('disabled');
+    } else {
+      $('#btn').attr('disabled', '');
     }
-    console.log(addObj)
+  });
+});
+
+async function addvideo(){
+  let addObj = {
+    video_link : document.getElementById("video_link").value,
+    title: document.getElementById("title").value,
+    video_image :document.getElementById("video_image").value,
+    genre : document.getElementById("genre").value,
+    reviews:[]
+  }
+  console.log(addObj)
     let httpResponse = await fetch("https://cryptic-gorge-43148.herokuapp.com/http://anyservice.imassoft.com/1907/videos/",{
     method : "POST",
     headers : {
@@ -36,4 +48,3 @@ async function addvideo(){
   
   window.location.href = `./dashboard.html?username=${username}`;
 }
- 
